@@ -7,4 +7,7 @@ mavenPath= tool 'Maven'
 stage('Build&Package'){
 sh "'${mavenPath}/bin/mvn' clean package"
 }
+stage('Deploy'){
+sh "'${mavenPath}/bin/mvn' deploy"
+}
 }
