@@ -1,9 +1,10 @@
 node{
+def mavenPath
 Stage("Get Code"){
 git "https://github.com/Vivek-11/course.git"
+mavenPath= Tool 'Maven'
 }
 Stage("Build&Package"){
-withMaven(maven : 'maven_3_5_3')
-sh "mvn clean package"
+sh "'{mavenPath}/bin/mvn' clean package"
 }
 }
