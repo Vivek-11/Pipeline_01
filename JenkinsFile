@@ -1,8 +1,9 @@
 node{
-Stage(Get Code){
+Stage("Get Code"){
 git "https://github.com/Vivek-11/course.git"
 }
-Stage(Build&Package){
+Stage("Build&Package"){
+withMaven(maven : 'maven_3_5_3')
 sh "mvn clean package"
 }
 }
