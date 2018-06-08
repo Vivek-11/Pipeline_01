@@ -1,0 +1,8 @@
+node{
+Stage(Get Code){
+git "https://github.com/Vivek-11/course.git"
+}
+Stage(Build&Package){
+sh "mvn clean package"
+}
+}
