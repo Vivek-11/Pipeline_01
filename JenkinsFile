@@ -4,9 +4,9 @@ stage('Get Code'){
 git "https://github.com/Vivek-11/course.git"
 mavenPath= tool 'Maven'
 }
-stage('Build&Package'){
-sh "'${mavenPath}/bin/mvn' clean package"
-}
+//stage('Build&Package'){
+//sh "'${mavenPath}/bin/mvn' clean package"
+//}
 stage('Deploy'){
 sh "'${mavenPath}/bin/mvn' deploy"
 }
