@@ -8,7 +8,7 @@ mavenPath= tool 'Maven'
 //sh "'${mavenPath}/bin/mvn' clean package"
 //}
 stage('Deploy'){
-sh "'${mavenPath}/bin/mvn' deploy"
-//sh "cp  "
+//sh "'${mavenPath}/bin/mvn' deploy"
+sh "cp /var/lib/jenkins/workspace/Pipeline01/target/course.war /home/vivek/apache-tomcat-9.0.8/webapps "
 }
 }
