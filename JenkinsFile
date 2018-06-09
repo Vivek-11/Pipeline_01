@@ -9,5 +9,6 @@ mavenPath= tool 'Maven'
 //}
 stage('Deploy'){
 sh "'${mavenPath}/bin/mvn' deploy"
+sh "cp filepath destination"
 }
 }
