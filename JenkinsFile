@@ -9,6 +9,6 @@ mavenPath= tool 'Maven'
 //}
 stage('Deploy'){
 //sh "'${mavenPath}/bin/mvn' deploy"
-sh "mv /var/lib/jenkins/workspace/Pipeline01/target/course.war /home/vivek/apache-tomcat-9.0.8/webapps"
+sh "sudo cp /var/lib/jenkins/workspace/Pipeline01/target/course.war /home/vivek/apache-tomcat-9.0.8/webapps"
 }
 }
